@@ -1,38 +1,7 @@
 git remoto agregar origen https://github.com/usofamiliar/usofamiliar.git
  git rama -M principal 
-git push -u origen principal
-HTML
-<!DOCTYPE html>
-<html>
-<head>
-<title>Predicción de Lotería</title>
-</head>
-<body>
-<h1>Predicción de Lotería</h1>
-<form action="predict.php" method="post">
-<input type="text" name="lotteryName" placeholder="Nombre de la Lotería">
-<input type="number" name="epochs" placeholder="Épocas">
-<input type="text" name="username" placeholder="Nombre de usuario">
-<input type="password" name="password" placeholder="Contraseña">
-<input type="submit" value="Predecir">
-</form>
-</body>
-</html>
-PHP
-<?php
-if (isset($_POST['lotteryName']) && isset($_POST['epochs']) && isset($_POST['username']) && isset($_POST['password'])) {
-    $lotteryName = $_POST['lotteryName'];
-    $epochs = $_POST['epochs'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+git push -u
 
-    if ($username == "" or $password == "") {
-        echo "Por favor, inicie sesión primero.";
-        return;
-    }
-
-    $model = little_blue_code(Sequential());
-    $model.fit(get_historical_data(55000000), y=get_predictions($lotteryName), epochs=$epochs);
 
     $predictions = model.predict(get_historical_data(55000000));
 
